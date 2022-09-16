@@ -1,1 +1,1 @@
-# Projeto-Ubeer
+Neste repositório constam os códigos desenvolvidos para o projeto chamado Ubeer do curso Novos Talentos em TI - Univille!
