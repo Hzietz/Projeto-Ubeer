@@ -18,7 +18,7 @@ public class ClientesDAO {
 
     String enderecoBD = "jdbc:mariadb://localhost:3306/ubeer";
     String userBD = "root";
-    String senhaBD = "root";
+    String senhaBD = "goldship";
 
 
 
@@ -238,7 +238,7 @@ public class ClientesDAO {
                                                   userBD, 
                                                   senhaBD);
 	
-            PreparedStatement query = conexao.prepareStatement("INSERT INTO cliente (cliente.nome, cliente.endereço, " +
+            PreparedStatement query = conexao.prepareStatement("INSERT INTO cliente (cliente.nome, cliente.endereco, " +
                                                                "cliente.numero, cliente.bairro, cliente.telefone, cliente.email, " +
                                                                "cliente.cep, cliente.senha) VALUES (?, ?, ?, ?, ?, ?, ?, ?); ");
 
@@ -252,7 +252,7 @@ public class ClientesDAO {
            query.setString(8, cli.getSenha());  
 
            Integer resultado = query.executeUpdate();
-           System.out.println("ClienterDAO - adicionar - resultado " + resultado);
+           System.out.println("ClientesDAO - adicionar - resultado " + resultado);
 
             query = conexao.prepareStatement("SELECT MAX(cliente.codCliente) FROM cliente;");
 
